@@ -60,8 +60,9 @@ def get_brands_summary():
      using only ONE database query.'''
 
     # I think I'm meant to only list the Brand.name once for all the models of that 
-    # brand but I'm not sure how to do this.
+    # brand but I'm not sure how to do this with only one query.
     print (db.session.query(Brand.name, Model.name).group_by(Brand.name, Model.name).all())
+
 
 # -------------------------------------------------------------------
 # Part 2.5: Discussion Questions (Include your answers as comments.)
